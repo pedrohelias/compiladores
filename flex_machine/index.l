@@ -7,12 +7,15 @@ BARRA [/]
 
 %}
 
+campo [0-31]+
+vazios [ \t]+
 
 
 %%
 
 [vazios]  {} 
 {campo} {return CAMPO;}
+{barra} {return BARRA;}
 
 
 
