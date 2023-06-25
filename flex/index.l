@@ -2,7 +2,7 @@
 #include <stdio.h>
 %}
 
-DIA [1-31]{1,1}
+DIA [1-31]
 DIA_TOKEN {DIA}+
 MES [1-12]
 MES_TOKEN {MES}+
@@ -13,8 +13,7 @@ BARRA [/]
 
 %%
 
-{DIA_TOKEN}{1,1}{BARRA}{MES_TOKEN}{BARRA}{ANO_TOKEN} {printf("Data valida!\n");}
-
+{DIA_TOKEN}{BARRA}{MES_TOKEN}{BARRA}{ANO_TOKEN} {printf("Data valida!\n");}
 
 [ \t\n]  {} 
 . {printf("data invalida: %s\n", yytext);}
