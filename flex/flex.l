@@ -1,3 +1,8 @@
+/*  Pedro Helias
+    Pedro Lucas Cassiano Martins 190036567
+    Victor de Souza Cabral 1900
+*/
+
 WHITESPACE [ ]
 TAB [\t]
 QUEBRA [\n]
@@ -31,7 +36,6 @@ BISSEXTO (19[13579][26]|19[02468][048]|201[26]|200[048]|2020)
 %%
 
 int yywrap();
-
 int main(void)
 {
     int token = yylex();
@@ -39,7 +43,6 @@ int main(void)
     printf("%d\n", data);
     return 0;
 }
-
 int yywrap()
 {
     return 1;
